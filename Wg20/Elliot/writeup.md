@@ -17,6 +17,7 @@ Giải nén file thì ta có 6 bức ảnh. Lúc đầu thì mình định làm 
 Đó là giấu 2 nửa của thuật toán sinh RSA và bit r của file "IMG_599192.png" và bit g của file "IMG_599193.png"
 Tìm được và ghép 2 nửa lại thì mình sẽ có 1 thuật toán như sau :
 
+```cpp
 f.seek(1024)
 salt = f.read(32)
 master = PBKDF2(password, salt, count=10000)
@@ -26,6 +27,7 @@ def notrand(n):
 notrand.i=0
 key = RSA.generate(2048, randfunc=notrand)
 print key.exportKey()
+```
 
 ta thêm phần import 
 from Crypto.Protocol.KDF import PBKDF2
