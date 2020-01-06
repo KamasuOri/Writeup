@@ -1,13 +1,13 @@
 Việc bắt đầu bằng xử lý 2 file ở thư mục Little help
-	file init.sh chỉ là để tạo ra 1 video hoàn chỉnh có âm thanh thôi. 
-		Phần video là gợi ý những bước cần thực hiện:
-			- Mở file lưu trữ ảnh
-			- lấy thuật toán sinh RSA đc giấu trong bức ảnh nào đó
-			- Dùng thuật toán đó thì đc private key để giải mã file ở trong "Ecorp's encrypted data"
-			- Flag nằm ở đấy
-		Bí mật ở file ".wav" ta dùng wavsteg để lấy đc gợi ý tiếp theo gồm:
-								- mã của file "track0.iso" (dùng hxdEditor thì ta sẽ biết là cần đổi sang đuôi ".zip")
-								- Đầu vào của thuật toán sinh private key
+file init.sh chỉ là để tạo ra 1 video hoàn chỉnh có âm thanh thôi. 
+Phần video là gợi ý những bước cần thực hiện:
+- Mở file lưu trữ ảnh
+- lấy thuật toán sinh RSA đc giấu trong bức ảnh nào đó
+- Dùng thuật toán đó thì đc private key để giải mã file ở trong "Ecorp's encrypted data"
+- Flag nằm ở đấy
+Bí mật ở file ".wav" ta dùng wavsteg để lấy đc gợi ý tiếp theo gồm:
+- mã của file "track0.iso" (dùng hxdEditor thì ta sẽ biết là cần đổi sang đuôi ".zip")
+- Đầu vào của thuật toán sinh private key
 stegolsb wavsteg -r -i audio.wav -o output.txt -n 2 -b 100
 
 Thu được
