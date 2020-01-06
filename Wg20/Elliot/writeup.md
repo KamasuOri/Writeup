@@ -7,10 +7,12 @@ Phần video là gợi ý những bước cần thực hiện:
 - Flag nằm ở đấy
 
 Bí mật ở file ".wav" ta dùng wavsteg để lấy đc gợi ý tiếp theo gồm:
-- mã của file "track0.iso" (dùng hxdEditor thì ta sẽ biết là cần đổi sang đuôi ".zip")
+- Password của file "track0.iso" (dùng hxdEditor thì ta sẽ biết là cần đổi sang đuôi ".zip")
 - Đầu vào của thuật toán sinh private key
 
+```cpp 
 stegolsb wavsteg -r -i audio.wav -o output.txt -n 2 -b 100
+```
 - Từ đây là có wrong password là `IM9G_95791.png` và file.name là `IM9G_95791.png` (dùng cho phần sau)
 - Thì ý tưởng của mình là dùng wrong password đảo thứ tự các chữ cái để ra được mật khẩu thật (bruteforce). Mình có gợi ý bằng các để chữ "IMG_" và ".png" để mọi người hiểu ra là mật khẩu có dạng gần giống với định dạng tên ảnh nhưng mọi thứ k theo đúng ý của mình :( :( :( nên đã có 1 hint thêm vào cho phần này
 - Sau khi bruteforce với không gian là 6! (= 720 vì chỉ bruteforce phần số thôi) thì ta sẽ đc mật khảu là "IMG_599197.png"
